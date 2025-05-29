@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+</html>
+<head>
+    <section id="projects-header">
+        <a class="header-btn {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="/">HOME</a>
+        <a class="header-btn {% if request.resolver_match.url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}">PROJECTS</a>
+    </section>
+</head>
+<body id="projects-body">
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="spinner-2"></div>
+    </div>
+    <video class="video-fondo" autoplay loop muted>
+        <source src="{% static 'home/videos/fondo.mp4' %}">
+    </video>
+    <section id="about-me">
+        <img class="profile" src="{% static 'home/images/profile.jpg' %}" alt="Profile-picture">
+    </section>
+    <section id="proyects">
+        <h1><strong>Some of my Work</strong></h1>
+        <div class="proyects-matrix">
+            <div class="proyect-item">
+                <img src="{% static 'home/images/portfolio.png' %}" alt="my-portfolio">
+                <a href="https://github.com/Javier00033/My-portfolio/"><img src="{% static 'home/images/glink.png' %}" alt="Glink"></a>
+                <p>My Portfolio</p>
+            </div>
+            <div class="proyect-item">
+                <img src="{% static 'home/images/gstreamer.png' %}" alt="gs-temp">
+                <a href="https://github.com/Javier00033/Templates-Gstreamer/"><img src="{% static 'home/images/glink.png' %}" alt="Glink"></a>
+                <p>GStreamer-Python Templates</p>
+            </div>
+            <div class="proyect-item">
+                <img src="{% static 'home/images/jair.png' %}" alt="jair-ink">
+                <a href="https://github.com/Javier00033/jair_ink_website-django-angular/"><img src="{% static 'home/images/glink.png' %}" alt="Glink"></a>
+                <p>Jair Ink Webpage</p>
+            </div>
+<!--          <div class="proyect-item">
+                <img src="{% static 'home/images/webstore' %}" alt="webstore-django">
+                <a href="https://github.com/Javier00033/Webstore-Django/"></a>
+                <p>Webstore</p>             
+            </div>-->
+        </div>
+    </section>
+    <section id="links">
+        <div class="links-row">
+            <a class="btn" href="https://www.linkedin.com/in/javier-guti%C3%A9rrez-medina-6968b6327/">
+                <img src="{% static 'home/images/in.png' %}" alt="in">
+                <p>Linkedin</p>
+            </a>
+            <a class="btn" href="https://github.com/Javier00033/">
+                <img src="{% static 'home/images/github.png' %}" alt="github">
+                <p>Github</p>
+            </a>
+            <a class="btn" href="mailto:javiergutierrezmedina@hotmail.com">
+                <img src="{% static 'home/images/hotmail.png' %}" alt="email">
+                <p>Email</p>
+            </a>
+            <a class="btn" href="https://wa.me/+5358701859">
+                <img src="{% static 'home/images/wts.png' %}" alt="whatsapp">
+                <p>Whatsapp</p>
+            </a>
+        </div>
+    </section>
+    <script src="{% static 'home/js/loading.js' %}"></script>
+</body>

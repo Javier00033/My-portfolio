@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+</html>
+<head>
+    <section id="home-header">
+        <a class="header-btn {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="/">HOME</a>
+        <a class="header-btn {% if request.resolver_match.url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}">PROJECTS</a>
+    </section>
+</head>
+<body id="home-body">
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="spinner-2"></div>
+    </div>
+    <video class="video-fondo" autoplay loop muted>
+        <source src="{% static 'home/videos/fondo.mp4' %}" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <section id="personal-info">
+        <a class="CV" href="{% static 'home/files/Javier Gutiérrez Medina -- CV.pdf' %}" download="Javier_Gutierrez_CV.pdf">
+            <img src="{% static 'home/images/logo.png' %}" alt="Logo">
+            <h2><strong>WEB DEVELOPER</strong></h2>
+        </a>
+        <h1><strong>I made what I think...</strong></h1>
+        <p>I am an engineer graduated from the Technological University of Havana, CUJAE since 2024. I work as a professional in my field and also as a freelance fullstack developer. I am very passionate about programming because it is the modern way of creating complicated things, complex things with the mind. If you are a business searching for a web presence or an private employer looking to hire, you can contact with me here.</p>
+    </section>
+    <section id="technologies">
+        <h1><strong>Technologies</strong></h1>
+            <div class="lenguages">
+                <h2>Lenguages</h2>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/c.png' %}" alt="C">
+                    <p>C</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/c++.png' %}" alt="C++">
+                    <p>C++</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/python.png' %}" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/assembler.png' %}" alt="Assembler">
+                    <p>Assembler</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/css.png' %}" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/html.png' %}" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/json.png' %}" alt="json">
+                    <p>Json</p>
+                </div>
+            </div>
+            <div class="frameworks-libraries">
+                <h2>Frameworks & Libraries</h2>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/angular.png' %}" alt="Angular">
+                    <p>Angular</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/django.png' %}" alt="Django">
+                    <p>Django</p>
+                </div>
+            <div class="software-devices">
+                <h2>Software & Devices</h2>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/odoo.png' %}" alt="Odoo">
+                    <p>Odoo</p>
+                </div>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/embedded.png' %}" alt="embedded">
+                    <p>Embedded Sys.</p>
+                </div>
+            </div>
+            <div class="learning">
+                <h2>Learning</h2>
+                <div class="tec-item">
+                    <img src="{% static 'home/images/javascript.png' %}" alt="knowledge">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="XP">
+        <h1><strong>Experience</strong></h1>
+            <div class="XP-item">
+                <img src="{% static 'home/images/enterprise.png' %}" alt="Enterprise">
+                <h1>ATI</h1>
+                <p>Communications and Remote Control Specialist</p>
+                <p>2024 - Present</p>
+            </div>
+            <div class="XP-item">
+                <img src="{% static 'home/images/enterprise.png' %}" alt="Enterprise">
+                <h1>Odoo Developer</h1>
+                <p>Private developer, consultor and designer</p>
+                <p>2024 - Present</p>
+            </div>
+    </section>
+    <section id="links">
+        <div class="links-row">
+            <a class="btn" href="https://www.linkedin.com/in/javier-guti%C3%A9rrez-medina-6968b6327/">
+                <img src="{% static 'home/images/in.png' %}" alt="in">
+                <p>Linkedin</p>
+            </a>
+            <a class="btn" href="https://github.com/Javier00033/">
+                <img src="{% static 'home/images/github.png' %}" alt="github">
+                <p>Github</p>
+            </a>
+            <a class="btn" href="mailto:javiergutierrezmedina@hotmail.com">
+                <img src="{% static 'home/images/hotmail.png' %}" alt="email">
+                <p>Email</p>
+            </a>
+            <a class="btn" href="https://wa.me/+5358701859">
+                <img src="{% static 'home/images/wts.png' %}" alt="whatsapp">
+                <p>Whatsapp</p>
+            </a>
+        </div>
+    </section>
+    <script src="{% static 'home/js/loading.js' %}"></script>
+</body>

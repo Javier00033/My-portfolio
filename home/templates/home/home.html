@@ -10,6 +10,7 @@
         <a class="header-btn {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="/">HOME</a>
         <a class="header-btn {% if request.resolver_match.url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}">PROJECTS</a>
     </section>
+    <link rel="icon" type="image/x-icon" href="{% static 'home/favicon.png' %}">
 </head>
 <body id="home-body">
     <div id="loading-screen">

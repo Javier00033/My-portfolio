@@ -2,6 +2,7 @@ set -e
 
 cd briefcase_javier_frontend
 npm install
+pip install gunicorn
 npm run build --prod
 
 rm -rf ../static/home/angular_build

@@ -1,6 +1,6 @@
 set -e
 
-cd frontend
+cd briefcase_javier_frontend
 npm install
 npm run build --prod
 

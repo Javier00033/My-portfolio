@@ -2,9 +2,15 @@ services:
   - type: web
     name: javier-gutierrez-portfolio
     env: python
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn briefcase_javier.wsgi:application"
+    plan: free
+
+    buildCommand: ./build.sh
+    startCommand: gunicorn briefcase_javier.wsgi:application
+
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: briefcase_javier.settings
-    plan: free
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: PORT
+        value: 10000

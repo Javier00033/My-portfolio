@@ -3,6 +3,9 @@ set -e
 cd briefcase_javier_frontend
 npm install
 pip install gunicorn
+pip install whitenoise
+pip install django
+pip install --force-reinstall -r requirements.txt
 npm run build --prod
 
 rm -rf ../static/home/angular_build

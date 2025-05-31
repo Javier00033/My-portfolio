@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+pip install --upgrade pip
+pip install -r requirements.txt
+
 # 1. Construir el frontend Angular
 cd briefcase_javier_frontend
 npm install

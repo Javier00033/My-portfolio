@@ -1,3 +1,16 @@
+head {
+    position: absolute;
+}
+
+#home-header, #projects-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    margin-left: 520px;
+}
+
 .header-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -10,8 +23,8 @@
     font-size: 0.9rem;
     font-style: normal;
     position: relative;
-    top: 10px;
-    left: 420px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .header-btn::after {
@@ -48,7 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
     max-width: 1200px;
@@ -63,7 +76,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
     max-width: 1200px;
@@ -186,8 +199,14 @@
 }
 
 #about-me {
-    padding: 20px;
-    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 110px;
+    margin-left: 220px;
+    margin-bottom: 30px;
 }
 
 #about-me p {
@@ -388,7 +407,7 @@
 
 .proyects-matrix {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     margin-top: -60px;
@@ -396,8 +415,8 @@
 
 .proyect-item img {
     border: 2px solid #000;
-    width: 350px;
-    height: 220px;
+    width: 270px;
+    height: 170px;
 }
 
 img[alt='Glink'] {
@@ -468,4 +487,26 @@ img[alt='Profile-picture']:hover {
     font-style: normal;
     color: #fff;
     top: -60px;
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .links-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
